@@ -8,7 +8,7 @@ ENV HUBOT_SLACK_TOKEN nope-1234-5678-91011-00e4dd
 ENV HUBOT_NAME myhubot
 ENV HUBOT_OWNER none
 ENV HUBOT_DESCRIPTION Hubot
-ENV EXTERNAL_SCRIPTS "hubot-help,hubot-pugme,hubot-redis-brain,hubot-maps,hubot-diagnostics"
+ENV EXTERNAL_SCRIPTS "hubot-help,hubot-pugme,hubot-redis-brain,hubot-maps,hubot-diagnostics,http-post-say,hubot-uptime-robot"
 ENV PORT 8080
 
 RUN adduser -D hubot ; npm install -g hubot coffee-script yo generator-hubot
