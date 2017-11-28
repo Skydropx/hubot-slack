@@ -9,10 +9,17 @@ services:
   hubot:
     build: .
     image: skydropmx/hubot-slack
+    depends_on: 
+      - redis
     volumes:
       - ./storage/scripts:/home/hubot/scripts
     env_file:
       - variables.env
-    ports:
-      - "127.0.0.1:2000:8080"
+#    ports:
+#      - "127.0.0.1:2000:8080"
 
+
+networks:
+  default:
+    external:
+      name: waybillmanager_default
